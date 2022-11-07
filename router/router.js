@@ -90,12 +90,6 @@ router.post("/costmer", async (req, res) => {
     }
 })
 
-/*
-1 - get - /orders/orderID
-2 - get - /product/productID
-3 - get - /customer/customerID
-4 - get - /product/productType
-*/
 
 router.get("/orders/:orderID", async (req, res) => {
     let id = req.params.orderID;
@@ -148,10 +142,6 @@ router.get("/costmer/:customerID", async (req, res) => {
 })
 
 
-/*
-1 - put - /productName/availableQuantity
-1 - put - /email/costOfAnOrder
-*/
 router.put("/:productName/:availableQuantity", async (req, res) => {
     const productName = req.params.productName;
     const qty = req.params.availableQuantity;
